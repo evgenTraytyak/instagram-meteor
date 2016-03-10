@@ -1,0 +1,63 @@
+.upload-page {
+    background-color: #333;
+    height: 100%;
+    }
+
+.upload-page__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 60px;
+    margin-bottom: 20px;
+    background-color: #222;
+    border-bottom: 1px solid #555;
+    }
+
+.upload-page__title {
+    color: #fff;
+    font-size: 32px;
+    font-weight: lighter;
+    }
+
+.upload-page__back,
+.upload-page__save {
+    color: #4090DC;
+    font-size: 24px;
+    font-weight: lighter;
+    cursor: pointer;
+    }
+
+.upload-page__inner {
+    max-width: 600px;
+    margin: 0 auto;
+    }
+
+.upload-page__photo {
+    margin-bottom: 10px;
+    }
+
+.upload-page__filters {
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: stretch;
+    overflow-x: scroll;
+    }
+
+.filter {
+    max-width: 90px;
+    margin-right: 10px;
+    }
+
+.filter__preview {
+    border-radius: 5px;
+    }
+
+.filter__name {
+    margin-top: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: lighter;
+    }

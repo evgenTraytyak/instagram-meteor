@@ -1,0 +1,15 @@
+template(name="profile")
+  .profile
+    img(src=avatar).profile__photo
+    
+    .profile__name= name
+    
+    .profile__stat
+      .profile__pub #{publications_count} публикаций
+      .profile__followers 2,073 подписчиков
+      .profile__sub Подписки: 13
+      
+    .profile__posts
+      each posts
+        .profile__post
+          img.profile__post-image(src=photo)

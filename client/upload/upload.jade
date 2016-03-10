@@ -1,0 +1,55 @@
+template(name="upload")
+  .upload-page
+    .upload-page__header
+      .upload-page__back Back
+      .upload-page__title Filters
+      .upload-page__save Publish
+      
+    .upload-page__inner
+      img.upload-page__photo(src="{{c.url uploaded_photo width=600 height=600 crop='fill' effect=uploaded_photo_effect }}")
+      
+      unless uploaded_photo
+        button.upload-page__take-photo take a photo
+        input.upload-page__upload-photo(type="file")
+      
+      if uploaded_photo
+        .upload-page__filters
+          .filter(data-filter="")
+            img.filter__preview(src="{{c.url uploaded_photo width=90 height=90 crop='fill' }}")
+            
+            .filter__name Normal
+            
+          .filter(data-filter="grayscale")
+            img.filter__preview(src="{{c.url uploaded_photo width=90 height=90 crop='fill' effect='grayscale' }}")
+            
+            .filter__name Grayscale
+            
+          .filter(data-filter="blur:150")
+            img.filter__preview(src="{{c.url uploaded_photo width=90 height=90 crop='fill' effect='blur:150' }}")
+            
+            .filter__name Blur
+            
+          .filter(data-filter="sepia:70")
+            img.filter__preview(src="{{c.url uploaded_photo width=90 height=90 crop='fill' effect='sepia:70' }}")
+            
+            .filter__name Sepia
+            
+          .filter(data-filter="saturation:-50")
+            img.filter__preview(src="{{c.url uploaded_photo width=90 height=90 crop='fill' effect='saturation:-50' }}")
+            
+            .filter__name Less saturation
+              
+          .filter(data-filter="saturation:50")
+            img.filter__preview(src="{{c.url uploaded_photo width=90 height=90 crop='fill' effect='saturation:50' }}")
+            
+            .filter__name More saturation
+            
+          .filter(data-filter="oil_paint")
+            img.filter__preview(src="{{c.url uploaded_photo width=90 height=90 crop='fill' effect='oil_paint' }}")
+            
+            .filter__name Oil paint
+            
+          .filter(data-filter="improve")
+            img.filter__preview(src="{{c.url uploaded_photo width=90 height=90 crop='fill' effect='improve' }}")
+            
+            .filter__name Auto improve

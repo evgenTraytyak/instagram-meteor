@@ -1,0 +1,34 @@
+template(name="post")
+  article.post
+    header.post__header
+      img.post__author-photo(src=photo)
+
+      .post__author-and-location
+
+        .post__author-name Eugene Traytyak
+
+        address.post__location Офис datarockets
+
+      time.post__time 1 ч
+
+    .post__photo
+      img(src=photo)
+
+    .post__actions
+
+    footer.post__footer
+      .post__like-text 35 отметок «Нравится»
+      
+      .post__comments
+        each comments
+          +postComment
+          
+      .post__add-comment
+        input.post__add-comment-field(placeholder="Добавить комментарий...")
+
+template(name="postComment")
+  .post-comment
+    .post-comment__author= authorName
+    
+    .post-comment__text= text
+    
